@@ -5,7 +5,7 @@ class TeacherProfile extends React.Component {
 
     constructor(props){
         super(props);
-        this.statee = {
+        this.state = {
 
         }
     }
