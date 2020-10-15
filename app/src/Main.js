@@ -4,6 +4,20 @@ import { connect } from 'react-redux';
 
 import Home from './Screens/Home'
 import Navbar from './Components/Navbar'
+import Assignments from './Screens/Assignments'
+import Dashboard from './Screens/Dashboard'
+import NoticeBoard from './Screens/NoticeBoard'
+import Landing from './Screens/Landing'
+import DiscussionRoom from './Screens/DiscussionRoom'
+import SubjectRoom from './Screens/SubjectRoom'
+import Schedule from './Screens/Schedule'
+import Admin from './Screens/Users/Admin'
+import TeacherProfile from './Screens/Users/TeacherProfile'
+import ParentProfile from './Screens/Users/ParentProfile'
+import StudentProfile from './Screens/Users/StudentProfile'
+import Login from './Screens/Auth/Login'
+import Signup from './Screens/Auth/Signup'
+
 
 // DO NOT REMOVE THESE, THESE WILL BE CONFIGURED LATER
 
@@ -31,8 +45,23 @@ class Main extends Component{
             <div>
                 <Navbar />
                 <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Redirect to='/' />
+                    <Route exact path='/home' component={Home} />
+                    <Route exact path='/' component={Landing} />
+                    <Route exact path='/student' component={StudentProfile} />
+                    <Route exact path='/teacher' component={TeacherProfile} />
+                    <Route exact path='/parent' component={ParentProfile} />
+                    <Route exact path='/dashboard' component={Dashboard} />
+                    <Route exact path='/noticeboard' component={NoticeBoard} />
+                    <Route exact path='/assignments' component={Assignments} />
+                    <Route exact path='/login' component={Login} />
+                    <Route exact path='/signup' component={Signup} />
+                    <Route exact path='/subject' component={SubjectRoom} /> 
+                    <Route exact path='/discussion' component={DiscussionRoom} /> 
+                    <Route exact path='/schedule' component={Schedule} />
+                    {/* <Route exact path='/school' component={School} /> */}
+                    <Route exact path='/admin' component={Admin} />
+                    
+                    <Redirect to='/Home' />
                 </Switch>
             </div>
         )
