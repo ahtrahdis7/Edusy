@@ -7,7 +7,7 @@ const Mail = require('../../Utils/Mail')
 
 const get = (req, res, next) => {
     res.statusCode = 403;
-    res.end('LOGIN operation not supported yet');
+    res.end('GET operation not supported yet');
 }
 
 const post = (req, res, next) => {
@@ -39,12 +39,12 @@ const post = (req, res, next) => {
 
 const put = (req, res, next) => {
     res.statusCode = 403;
-    res.end('LOGIN operation not supported yet');
+    res.end('PUT operation not supported yet');
 }
 
 const del = (req, res, next) => {
     res.statusCode = 403;
-    res.end('LOGIN operation not supported yet');
+    res.end('DELETE operation not supported yet');
 }
 
 
