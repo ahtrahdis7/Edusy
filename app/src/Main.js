@@ -18,6 +18,8 @@ import Login from './Screens/Auth/Login';
 import Signup from './Screens/Auth/Signup';
 import About from './Screens/About';
 import Contact from './Screens/Contact';
+import StudentDetails from './Screens/Auth/StudentDetails';
+import TeacherDetails from './Screens/Auth/TeacherDetails';
 
 // DO NOT REMOVE THESE, THESE WILL BE CONFIGURED LATER
 
@@ -52,6 +54,8 @@ class Main extends Component {
 					<Route exact path='/schedule' component={Schedule} />
 					<Route exact path='/about' component={About} />
 					<Route exact path='/contact' component={Contact} />
+					<Route exact path='/registerstudent' component={StudentDetails} />
+					<Route exact path='/registerteacher' component={TeacherDetails} />
 					{/* <Route exact path='/school' component={School} /> */}
 					<Route exact path='/admin' component={Admin} />
 					<Redirect to='/' />

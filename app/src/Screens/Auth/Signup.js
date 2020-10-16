@@ -108,7 +108,9 @@ class Signup extends React.Component {
 							</div>
 
 							<div className='container-login100-form-btn'>
-								<button className='login100-form-btn'>Register</button>
+								<Link to='registerstudent'>
+									<button className='login100-form-btn'>Register</button>
+								</Link>
 							</div>
 
 							<div className='text-center p-t-50'>

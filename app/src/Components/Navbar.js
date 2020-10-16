@@ -11,7 +11,7 @@ class Home extends React.Component {
 
 	render () {
 		return (
-			<nav className='navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light' id='ftco-navbar'>
+			<nav className='navbar navbar-expand-lg ftco_navbar ftco-navbar-light' id='ftco-navbar'>
 				<div className='container d-flex align-items-center'>
 					<Link className='navbar-brand' to='/'>
 						appname
