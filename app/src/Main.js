@@ -16,6 +16,10 @@ import ParentProfile from './Screens/Users/ParentProfile';
 import StudentProfile from './Screens/Users/StudentProfile';
 import Login from './Screens/Auth/Login';
 import Signup from './Screens/Auth/Signup';
+import About from './Screens/About';
+import Contact from './Screens/Contact';
+import StudentDetails from './Screens/Auth/StudentDetails';
+import TeacherDetails from './Screens/Auth/TeacherDetails';
 
 // DO NOT REMOVE THESE, THESE WILL BE CONFIGURED LATER
 
@@ -32,29 +36,31 @@ class Main extends Component {
 
 	render () {
 		return (
-			<BrowserRouter>
-				<div>
-					<Navbar />
-					<Switch>
-						<Route exact path='/home' component={Home} />
-						<Route exact path='/' component={Landing} />
-						<Route exact path='/student' component={StudentProfile} />
-						<Route exact path='/teacher' component={TeacherProfile} />
-						<Route exact path='/parent' component={ParentProfile} />
-						<Route exact path='/dashboard' component={Dashboard} />
-						<Route exact path='/noticeboard' component={NoticeBoard} />
-						<Route exact path='/assignments' component={Assignments} />
-						<Route exact path='/login' component={Login} />
-						<Route exact path='/signup' component={Signup} />
-						<Route exact path='/subject' component={SubjectRoom} />
-						<Route exact path='/discussion' component={DiscussionRoom} />
-						<Route exact path='/schedule' component={Schedule} />
-						{/* <Route exact path='/school' component={School} /> */}
-						<Route exact path='/admin' component={Admin} />
-						<Redirect to='/Home' />
-					</Switch>
-				</div>
-			</BrowserRouter>
+			<div>
+				{/* <Navbar /> */}
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route exact path='/landing' component={Landing} />
+					<Route exact path='/student' component={StudentProfile} />
+					<Route exact path='/teacher' component={TeacherProfile} />
+					<Route exact path='/parent' component={ParentProfile} />
+					<Route exact path='/dashboard' component={Dashboard} />
+					<Route exact path='/noticeboard' component={NoticeBoard} />
+					<Route exact path='/assignments' component={Assignments} />
+					<Route exact path='/login' component={Login} />
+					<Route exact path='/signup' component={Signup} />
+					<Route exact path='/subject' component={SubjectRoom} />
+					<Route exact path='/discussion' component={DiscussionRoom} />
+					<Route exact path='/schedule' component={Schedule} />
+					<Route exact path='/about' component={About} />
+					<Route exact path='/contact' component={Contact} />
+					<Route exact path='/registerstudent' component={StudentDetails} />
+					<Route exact path='/registerteacher' component={TeacherDetails} />
+					{/* <Route exact path='/school' component={School} /> */}
+					<Route exact path='/admin' component={Admin} />
+					<Redirect to='/' />
+				</Switch>
+			</div>
 		);
 	}
 }

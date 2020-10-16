@@ -4,6 +4,7 @@ import OurFeature from '../Components/Home/OurFeature';
 import ParentSay from '../Components/Home/ParentSay';
 import Slider from '../Components/Home/Slider';
 import TakeCourse from '../Components/Home/TakeCousre';
+import Navbar from '../Components/Navbar';
 
 class Home extends React.Component {
 	constructor (props) {
@@ -16,6 +17,7 @@ class Home extends React.Component {
 	render () {
 		return (
 			<div>
+				<Navbar />
 				<Slider />
 				<OurFeature />
 				<TakeCourse />

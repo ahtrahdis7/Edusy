@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
 	constructor (props) {
@@ -42,18 +43,17 @@ class Login extends React.Component {
 							<div className='container-login100-form-btn'>
 								<button className='login100-form-btn'>Login</button>
 							</div>
-
-							<div className='text-center p-t-12'>
-								<span className='txt1'>Forgot</span>
-								<a className='txt2' href='#'>
-									Username / Password?
-								</a>
-							</div>
-							<div className='text-center p-t-136'>
-								<a className='txt2' href='register.html'>
+							<div className='text-center p-t-80'>
+								<Link className='txt2' to='/signup'>
 									Create your Account
 									<i className='fa fa-long-arrow-right m-l-5' aria-hidden='true' />
-								</a>
+								</Link>
+							</div>
+							<div className='text-center p-t-12'>
+								<span className='txt1'>Forgot </span>
+								<Link className='txt2' to='!#'>
+									Username / Password?
+								</Link>
 							</div>
 						</form>
 					</div>
