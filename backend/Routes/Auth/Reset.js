@@ -9,8 +9,27 @@ const get = (req, res, next) => {
 }
 
 const post = (req, res, next) => {
-    res.statusCode = 403;
-    res.end('POST operation not supported yet');
+    User.findOne({_id: req.user._id}, (err, user) => {
+        if(user){
+            user.changePassword(req.body.oldpassword, req.body.newpassword, (err, user) => {
+                if(err){
+                    res.statusCode = 403;
+                    res.json({err: err})
+                    return
+                } else {
+                    res.statusCode = 200;
+                    res.json({success: "Successfully changed your password"})
+                    return
+                }
+            });
+            user.save();
+        } else {
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.json({err: "User Not Found"});
+            return;
+        }
+    })
 }
 
 const put = (req, res, next) => {

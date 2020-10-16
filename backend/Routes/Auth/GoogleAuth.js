@@ -11,7 +11,7 @@ const get = (req, res, next) => {
 const post = async (req, res, next) => {
     const { tokenId } = req.body;
     // console.log(req.body)
-    client.verifyIdToken({ idToken: tokenId, audience: "798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com" })
+    client.verifyIdToken({ idToken: tokenId, audience: "162914266374-344ng0vh52ttcq8ma7g7hiv4dn5i4llt.apps.googleusercontent.com" })
     .then((response) => {
         const { email_verified, name, email, picture } = response.payload;
         // console.log(response.payload);
