@@ -43,6 +43,7 @@ class Main extends Component{
     render(){
         return(
             <div>
+                <h1>HELLO</h1>
                 <Navbar />
                 <Switch>
                     <Route exact path='/home' component={Home} />
