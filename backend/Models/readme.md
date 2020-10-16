@@ -5,7 +5,6 @@ name
 picture
 phone 
 email
-type
 isTeacher
 isStudent
 isParent

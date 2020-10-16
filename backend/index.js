@@ -3,13 +3,17 @@ const express = require('express')
 // Create the express app
 const app = express()
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+var passport = require('passport');
 
 
 // IMPORT LOCAL PACKAGES
 const config = require('./config');
+const authenticate = require('./authenticate');
 
 // IMPORT ROUTERS
-
+const AuthRouter = require('./Routes/Auth/AuthRouter');
 
 // INIT MONGO DB
 const mongodburl = config.MONGODB_URL;
@@ -24,7 +28,18 @@ mongoose.connect(mongodburl, {
 });
 
 
+app.use(bodyParser.json({limit: "512kb", extended: true}));
+app.use(bodyParser.urlencoded({limit: "512kb", extended: true}));
+
+app.use(express.json());
+app.use(express.urlencoded({extended: true }));
+app.use(cookieParser());
+
+app.use(passport.initialize());
+
 // Routes and middleware
+
+app.use('/auth', AuthRouter);
 // app.use(/* ... */)
 // app.get(/* ... */)
 
@@ -45,6 +60,6 @@ app.listen(config.PORT, function (err) {
     return console.error(err)
   }
 
-  console.log('Started at http://localhost:1234')
+  console.log(`Started at http://localhost:${config.PORT}`)
 })
 
