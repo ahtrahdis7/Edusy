@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 	constructor (props) {
@@ -12,9 +13,9 @@ class Home extends React.Component {
 		return (
 			<nav className='navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light' id='ftco-navbar'>
 				<div className='container d-flex align-items-center'>
-					<a className='navbar-brand' href='index.html'>
-						Kiddos
-					</a>
+					<Link className='navbar-brand' to='/'>
+						appname
+					</Link>
 					<button
 						className='navbar-toggler'
 						type='button'
@@ -29,29 +30,29 @@ class Home extends React.Component {
 					<div className='collapse navbar-collapse' id='ftco-nav'>
 						<ul className='navbar-nav ml-auto'>
 							<li className='nav-item active'>
-								<a href='index.html' className='nav-link pl-0'>
+								<Link to='/' className='nav-link pl-0'>
 									Home
-								</a>
+								</Link>
 							</li>
 							<li className='nav-item'>
-								<a href='about.html' className='nav-link'>
+								<Link to='/about' className='nav-link'>
 									About
-								</a>
+								</Link>
 							</li>
 							<li className='nav-item'>
-								<a href='blog.html' className='nav-link'>
+								<Link to='/blog' className='nav-link'>
 									Blog
-								</a>
+								</Link>
 							</li>
 							<li className='nav-item'>
-								<a href='contact.html' className='nav-link'>
+								<Link to='/contact' className='nav-link'>
 									Contact Us
-								</a>
+								</Link>
 							</li>
 							<li className='nav-item'>
-								<a href='login.html' className='nav-link'>
+								<Link to='/login' className='nav-link'>
 									Login
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
