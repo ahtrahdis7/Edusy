@@ -16,8 +16,8 @@ const post = (req, res, next) => {
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 res.cookie('session-id', token, { httpOnly: false });
-                user.salt = "Nikal Lawde"
-                user.hash = "fuck your own ass"
+                user.salt = "NaN"
+                user.hash = "NaN"
                 res.json({success: true, token: token, user: user , status: 'You are successfully logged in!'});
             } else {
                 res.statusCode = 405;

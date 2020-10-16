@@ -1,7 +1,9 @@
 
 
 const authenticate = require('../../authenticate');
+const Otp = require('../../Models/Otp');
 const User = require('../../Models/User')
+const Mail = require('../../Utils/Mail')
 
 const get = (req, res, next) => {
     res.statusCode = 403;
@@ -9,8 +11,30 @@ const get = (req, res, next) => {
 }
 
 const post = (req, res, next) => {
-    res.statusCode = 403;
-    res.end('LOGIN operation not supported yet');
+    Otp.findOne({email: req.body.email})
+    .then((doc) => {
+        // console.log(doc)
+        if(doc.otp === parseInt(req.body.otp)){
+            User.findByUsername(req.body.email)
+            .then((user) => {
+                user.isEmailVerified = true;
+                user.save();
+                Mail.sendOtpSuccess(user.email);
+                res.statusCode = 200;
+                console.log
+                res.json({
+                    success: true,
+                    message: "Otp Successfully Verified"
+                });
+            });
+        } else {
+            res.statusCode = 400;
+            res.json({
+                success: false,
+                message: "Invalid Otp"
+            });
+        }
+    });
 }
 
 const put = (req, res, next) => {
