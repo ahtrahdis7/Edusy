@@ -1,4 +1,5 @@
 import React from 'react';
+import Sidebar from '../Components/Sidebar';
 
 class NoticeBoard extends React.Component {
 	constructor (props) {
@@ -11,58 +12,7 @@ class NoticeBoard extends React.Component {
 	render () {
 		return (
 			<div className='wrapper'>
-				<div className='sidebar'>
-					<div className='sidebar-wrapper'>
-						<div className='logo'>
-							<a
-								href='javascript:void(0)'
-								className='simple-text logo-normal'
-								style={{ paddingLeft: '10px' }}
-							>
-								<h6>HELLO KIM</h6>
-							</a>
-						</div>
-						<ul className='nav'>
-							<li className='active '>
-								<a href='./dashboard.html'>
-									<i className='tim-icons icon-chart-pie-36' />
-									<p>Dashboard</p>
-								</a>
-							</li>
-							<li>
-								<a href='./noticeboard.html'>
-									<i className='tim-icons icon-puzzle-10' />
-									<p>Notice Board</p>
-								</a>
-							</li>
-							<li>
-								<a href='./assignment.html'>
-									<i className='tim-icons icon-bell-55' />
-									<p>Assignments</p>
-								</a>
-							</li>
-							<li>
-								<a href='./typography.html'>
-									<i className='tim-icons icon-align-center' />
-									<p>Classes</p>
-								</a>
-							</li>
-							<li>
-								<a href='./user.html'>
-									<i className='tim-icons icon-single-02' />
-									<p>User Profile</p>
-								</a>
-							</li>
-
-							<li>
-								<a href='./rtl.html'>
-									<i className='tim-icons icon-world' />
-									<p>Support</p>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+				<Sidebar />
 				<div className='main-panel'>
 					{/* <!-- Navbar --> */}
 					<nav className='navbar navbar-expand-lg navbar-absolute navbar-transparent'>
