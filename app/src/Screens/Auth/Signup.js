@@ -27,34 +27,7 @@ class Signup extends React.Component {
 									className='input100'
 									type='text'
 									name='email'
-									placeholder='First Name'
-									required='required'
-								/>
-								<span className='focus-input100' />
-								<span className='symbol-input100'>
-									<i className='fa fa-user' aria-hidden='true' />
-								</span>
-							</div>
-							<div className='wrap-input100 validate-input' data-validate='Name is required'>
-								<input
-									className='input100'
-									type='text'
-									name='email'
-									placeholder='Last Name'
-									required='required'
-								/>
-								<span className='focus-input100' />
-								<span className='symbol-input100'>
-									<i className='fa fa-user' aria-hidden='true' />
-								</span>
-							</div>
-
-							<div className='wrap-input100 validate-input' data-validate='Address is required'>
-								<input
-									className='input100'
-									type='text'
-									name='email'
-									placeholder='Address'
+									placeholder='Enter Name'
 									required='required'
 								/>
 								<span className='focus-input100' />
@@ -106,12 +79,44 @@ class Signup extends React.Component {
 									<i className='fa fa-lock' aria-hidden='true' />
 								</span>
 							</div>
-
+							<div class='wrap-input100 validate-input' data-validate='Category is required'>
+								<select
+									class='input100'
+									name='institute_name'
+									id='institute_name'
+									style={{ border: 'none', color: 'grey' }}
+								>
+									<option selected='selected'>Who Are You?</option>
+									<option value='student'>Student</option>
+									<option value='Teacher'>Teacher</option>
+								</select>
+								<span class='focus-input100' />
+								<span class='symbol-input100'>
+									<i class='fa fa-university' aria-hidden='true' />
+								</span>
+							</div>
+							<div
+								className='wrap-input100 validate-input'
+								data-validate='Valid email is required: ex@abc.xyz'
+							>
+								<input
+									className='input100'
+									type='text'
+									name='email'
+									placeholder='Parent Email (Req if student)'
+								/>
+								<span className='focus-input100' />
+								<span className='symbol-input100'>
+									<i className='fa fa-envelope' aria-hidden='true' />
+								</span>
+							</div>
+							
 							<div className='container-login100-form-btn'>
 								<Link to='registerstudent'>
 									<button className='login100-form-btn'>Register</button>
 								</Link>
 							</div>
+							
 
 							<div className='text-center p-t-50'>
 								<Link className='txt2' to='/login'>

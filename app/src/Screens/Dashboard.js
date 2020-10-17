@@ -1,4 +1,8 @@
 import React from 'react';
+import '../Screens/css/assets/css/black-dashboard.css';
+import '../Screens/css/assets/css/black-dashboard.min.css';
+import '../Screens/css/assets/css/nucleo-icons.css';
+import '../Screens/css/assets/demo/demo.css';
 
 class Dashboard extends React.Component {
 	constructor (props) {
@@ -12,7 +16,6 @@ class Dashboard extends React.Component {
 		return (
 			<div class='wrapper'>
 				<div class='sidebar'>
-					{/* Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red" */}
 
 					<div class='sidebar-wrapper'>
 						<div class='logo'>
