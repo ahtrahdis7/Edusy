@@ -1,5 +1,7 @@
 
 const passport = require('passport');
+const gen_pass = require('generate-password');
+
 const authenticate = require('../../authenticate');
 const User = require('../../Models/User')
 const Otp = require('../../Models/Otp')
@@ -27,13 +29,13 @@ const post = (req, res, next) => {
                     status: "unsuccessful", 
                     err: "Email Already Registered but un-verified",
                     message: "OTP has been sent to your email, Please verify your email"
-                })
+                });
             } else {
                 res.statusCode = 409;
                 res.json({
                     status: "unsuccessful", 
                     err: " Email Already Registered and Verified, Try Logging In !! "
-                })
+                });
             }
         } else {
             User.register(new User(req.body), req.body.password, (err, user) => {
@@ -52,7 +54,11 @@ const post = (req, res, next) => {
                             passport.authenticate('local')(req,res, () => {
                                 res.statusCode = 200;
                                 res.setHeader('Content-Type', 'application/json');
-                                res.json({success: true, status: 'Registration Successful'});
+                                res.json({
+                                    success: true, 
+                                    status: 'Registration Successful',
+                                    user: user,
+                                });
                             });
                             var OTP = Math.ceil(Math.random() * (98765 - 12345) + 12345);
                             Otp.create({
@@ -60,11 +66,18 @@ const post = (req, res, next) => {
                                 otp: OTP,
                             }).then((doc) => {
                                 Mail.SendOtp(doc.email, doc.otp);
-                            })
+                            });
+                            //  if student
+                            // CREATE STUDENTS ACCOUNT HERE
+
+                            // CREATE PARENTS ACCOUNT RIGHT HERE
+                            // else 
+                            // CREATE TEACHERS ACCOUNT RIGHT HERE
+
                         }
                     });
                 }
-            })
+            });
         }
     });
 }
