@@ -40,8 +40,8 @@ class Home extends React.Component {
 								</Link>
 							</li>
 							<li className='nav-item'>
-								<Link to='/blog' className='nav-link'>
-									Blog
+								<Link to='/classes' className='nav-link'>
+									Classes
 								</Link>
 							</li>
 							<li className='nav-item'>

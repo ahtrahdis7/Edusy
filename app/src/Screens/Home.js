@@ -1,5 +1,6 @@
 import React from 'react';
 import Footer from '../Components/Footer';
+import Achievements from '../Components/Home/Achievement';
 import OurFeature from '../Components/Home/OurFeature';
 import ParentSay from '../Components/Home/ParentSay';
 import Slider from '../Components/Home/Slider';
@@ -19,9 +20,10 @@ class Home extends React.Component {
 			<div>
 				<Navbar />
 				<Slider />
-				<OurFeature />
 				<TakeCourse />
+				<OurFeature />
 				<ParentSay />
+				<Achievements />
 				<Footer />
 			</div>
 		);

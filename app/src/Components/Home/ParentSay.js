@@ -5,7 +5,7 @@ const ParentSay = () => {
 		<section className='ftco-section testimony-section bg-light'>
 			<div className='container'>
 				<div className='row justify-content-center mb-5 pb-2'>
-					<div className='col-md-8 text-center heading-section ftco-animate'>
+					<div className='col-md-8 text-center heading-section'>
 						<h2 className='mb-4'>
 							<span>What Parents</span> Says About Us
 						</h2>
@@ -15,7 +15,7 @@ const ParentSay = () => {
 						</p>
 					</div>
 				</div>
-				<div className='row ftco-animate justify-content-center'>
+				<div className='row justify-content-center'>
 					<div className='col-md-12'>
 						<div className='carousel-testimony owl-carousel'>
 							<div className='item'>

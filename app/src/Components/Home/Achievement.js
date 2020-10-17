@@ -10,7 +10,7 @@ const Achievements = () => {
 		>
 			<div className='container'>
 				<div className='row justify-content-center mb-5 pb-2'>
-					<div className='col-md-8 text-center heading-section heading-section-black ftco-animate'>
+					<div className='col-md-8 text-center heading-section heading-section-black'>
 						<h2 className='mb-4'>
 							<span>20 Years of</span> Experience
 						</h2>
@@ -23,53 +23,53 @@ const Achievements = () => {
 				<div className='row d-md-flex align-items-center justify-content-center'>
 					<div className='col-lg-10'>
 						<div className='row d-md-flex align-items-center'>
-							<div className='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div className='col-md d-flex justify-content-center counter-wrap '>
 								<div className='block-18'>
 									<div className='icon'>
 										<span className='flaticon-doctor' />
 									</div>
 									<div className='text'>
 										<strong className='number' data-number='18'>
-											0
+											18
 										</strong>
 										<span>Certified Teachers</span>
 									</div>
 								</div>
 							</div>
-							<div className='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div className='col-md d-flex justify-content-center counter-wrap '>
 								<div className='block-18'>
 									<div className='icon'>
 										<span className='flaticon-doctor' />
 									</div>
 									<div className='text'>
 										<strong className='number' data-number='351'>
-											0
+											351
 										</strong>
 										<span>Successful Kids</span>
 									</div>
 								</div>
 							</div>
-							<div className='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div className='col-md d-flex justify-content-center counter-wrap '>
 								<div className='block-18'>
 									<div className='icon'>
 										<span className='flaticon-doctor' />
 									</div>
 									<div className='text'>
 										<strong className='number' data-number='564'>
-											0
+											564
 										</strong>
 										<span>Happy Parents</span>
 									</div>
 								</div>
 							</div>
-							<div className='col-md d-flex justify-content-center counter-wrap ftco-animate'>
+							<div className='col-md d-flex justify-content-center counter-wrap '>
 								<div className='block-18'>
 									<div className='icon'>
 										<span className='flaticon-doctor' />
 									</div>
 									<div className='text'>
 										<strong className='number' data-number='300'>
-											0
+											300
 										</strong>
 										<span>Awards Won</span>
 									</div>

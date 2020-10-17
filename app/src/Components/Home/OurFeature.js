@@ -5,7 +5,7 @@ const OurFeature = () => {
 		<section className='ftco-services ftco-no-pb'>
 			<div className='container-wrap'>
 				<div className='row no-gutters'>
-					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary'>
+					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4  bg-primary'>
 						<div className='media block-6 d-block text-center'>
 							<div className='icon d-flex justify-content-center align-items-center'>
 								<span className='flaticon-teacher' />
@@ -19,7 +19,7 @@ const OurFeature = () => {
 							</div>
 						</div>
 					</div>
-					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary'>
+					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 bg-tertiary'>
 						<div className='media block-6 d-block text-center'>
 							<div className='icon d-flex justify-content-center align-items-center'>
 								<span className='flaticon-reading' />
@@ -33,7 +33,7 @@ const OurFeature = () => {
 							</div>
 						</div>
 					</div>
-					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth'>
+					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 bg-fifth'>
 						<div className='media block-6 d-block text-center'>
 							<div className='icon d-flex justify-content-center align-items-center'>
 								<span className='flaticon-books' />
@@ -47,7 +47,7 @@ const OurFeature = () => {
 							</div>
 						</div>
 					</div>
-					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-quarternary'>
+					<div className='col-md-3 d-flex services align-self-stretch pb-4 px-4 bg-quarternary'>
 						<div className='media block-6 d-block text-center'>
 							<div className='icon d-flex justify-content-center align-items-center'>
 								<span className='flaticon-diploma' />
