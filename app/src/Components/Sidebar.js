@@ -8,31 +8,33 @@ const Sidebar = () => {
 				<ul className='nav'>
 					<li className='active'>
 						<Link to='/dashboard'>
-							<i className='tim-icons icon-chart-pie-36' />
+							<i className='fa fa-pie-chart' />
 							<p>Dashboard</p>
 						</Link>
 					</li>
 					<li>
 						<Link to='/noticeboard'>
-							<i className='tim-icons icon-world' />
-							<p>noticeboard</p>
+							<i className='fa fa-bell-o' />
+							<p>Noticeboard</p>
 						</Link>
 					</li>
 					<li>
 						<Link to='/classes'>
-							<i className='tim-icons icon-notes' />
+							<i className='fa fa-book' />
 							<p>Classes</p>
 						</Link>
 					</li>
 					<li>
 						<Link to='/student'>
-							<i className='tim-icons icon-single-02' />
+							<i className='fa fa-user' />
 							<p>User Profile</p>
 						</Link>
 					</li>
 				</ul>
 			</div>
+			
 		</div>
+		
 	);
 };
 export default Sidebar;

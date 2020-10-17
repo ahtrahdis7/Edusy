@@ -48,18 +48,6 @@ class Dashboard extends React.Component {
 							</button>
 							<div className='collapse navbar-collapse' id='navigation'>
 								<ul className='navbar-nav ml-auto'>
-									<li className='search-bar input-group'>
-										<button
-											className='btn btn-link'
-											id='search-button'
-											data-toggle='modal'
-											data-target='#searchModal'
-										>
-											<i className='tim-icons icon-zoom-split' />
-											<span className='d-lg-none d-md-block'>Search</span>
-										</button>
-									</li>
-
 									<li className='dropdown nav-item'>
 										<a href='#' className='dropdown-toggle nav-link' data-toggle='dropdown'>
 											<div className='photo'>

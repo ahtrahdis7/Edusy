@@ -136,53 +136,20 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <div class="row">
-                  <div class="col-sm-6 text-left">
-                    <h2 class="card-title">Classes</h2>
-                  </div>
-                </div>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-lg-12 ml-auto mr-auto">
                       <div class="row">
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
+                        <div class="class-stu-card col-lg-12 btn mr-auto ml-auto">
+                          <img style="float: right;" 
                             class="avatar"
                             src="../images/emilyz.jpg"
                             alt="..."
                           />
-                          <button class="btn btn-primary btn-block" onclick="window.location.href='subdetails.html'">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
-                          </button>
-                        </div>
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
-                            class="avatar"
-                            src="../images/emilyz.jpg"
-                            alt="..."
-                          />
-                          <button class="btn btn-primary btn-block">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
-                          </button>
-                        </div>
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
-                            class="avatar"
-                            src="../images/emilyz.jpg"
-                            alt="..."
-                          />
-                          <button class="btn btn-primary btn-block">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
-                          </button>
+                          <div style="float: left;">
+                            <h2>Biology</h2>
+                            <h3>Class 9<br>Bharati Mishra</h3>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -190,45 +157,17 @@
                   <div class="row">
                     <div class="col-lg-12 ml-auto mr-auto">
                       <div class="row">
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
-                            class="avatar"
-                            src="../images/emilyz.jpg"
-                            alt="..."
-                          />
+                        <div class="class-card-add col-md-6 btn mr-auto ml-auto">
                           <button class="btn btn-primary btn-block">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
+                            Assignments
                           </button>
                         </div>
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
-                            class="avatar"
-                            src="../images/emilyz.jpg"
-                            alt="..."
-                          />
+                        <div class="class-card-add col-md-6 btn mr-auto ml-auto">
                           <button class="btn btn-primary btn-block">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
+                            Performance
                           </button>
                         </div>
-                        <div class="class-card col-md-4 btn mr-auto ml-auto">
-                          <img
-                            class="avatar"
-                            src="../images/emilyz.jpg"
-                            alt="..."
-                          />
-                          <button class="btn btn-primary btn-block">
-                            <div>
-                              <p>Biology</p>
-                              <p>Class 9</p>
-                            </div>
-                          </button>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -258,10 +197,7 @@
             </li>
           </ul>
           <div class="copyright">
-            ©
-            <script>
-              document.write(new Date().getFullYear())
-            </script>2018 made with <i class="tim-icons icon-heart-2"></i> by
+            © made with <i class="tim-icons icon-heart-2"></i> by
             <a href="javascript:void(0)" target="_blank">Creative Tim</a> for a better web.
           </div>
         </div>
@@ -312,28 +248,7 @@
           }
         });
 
-        $('.fixed-plugin .background-color span').click(function() {
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-
-          var new_color = $(this).data('color');
-
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data', new_color);
-          }
-
-          if ($main_panel.length != 0) {
-            $main_panel.attr('data', new_color);
-          }
-
-          if ($full_page.length != 0) {
-            $full_page.attr('filter-color', new_color);
-          }
-
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.attr('data', new_color);
-          }
-        });
+       
 
         $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
           var $btn = $(this);

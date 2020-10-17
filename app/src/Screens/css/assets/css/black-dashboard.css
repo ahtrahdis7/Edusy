@@ -22274,6 +22274,18 @@ Copyright (c) 2015 Daniel Eden
     max-width: 31% !important;
   }
 }
+@media (min-width: 768px) {
+  .class-stu-card {
+    flex: 0 0 95% !important;
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .class-card-add {
+    flex: 0 0 40% !important;
+    width: auto;
+  }
+}
 
 .class-card .btn {
   padding: 11px 24px;
@@ -22283,3 +22295,8 @@ Copyright (c) 2015 Daniel Eden
   width: 124px !important;
   height: 124px !important;
 }
+.class-stu-card .avatar {
+  width: 124px !important;
+  height: 124px !important;
+}
+
