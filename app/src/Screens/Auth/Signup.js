@@ -95,6 +95,24 @@ class Signup extends React.Component {
 									<i class='fa fa-university' aria-hidden='true' />
 								</span>
 							</div>
+							<div class='wrap-input100 validate-input' data-validate='Name is required'>
+								<select
+									class='input100'
+									name='institute_name'
+									id='institute_name'
+									style={{ border: 'none', color: 'grey' }}
+								>
+									<option selected='selected'>Enter your Institute Name</option>
+									<option value='IIIT_BH'>IIIT Bhubaneswar</option>
+									<option value='IIT_BH'>IIt BHU</option>
+									<option value='sai'>SAI INTERNATIONAL</option>
+									<option value='dav'>DAV PUBLIC SCHOOL</option>
+								</select>
+								<span class='focus-input100' />
+								<span class='symbol-input100'>
+									<i class='fa fa-university' aria-hidden='true' />
+								</span>
+							</div>
 							<div
 								className='wrap-input100 validate-input'
 								data-validate='Valid email is required: ex@abc.xyz'
