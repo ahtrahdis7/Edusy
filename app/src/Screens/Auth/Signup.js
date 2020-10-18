@@ -5,7 +5,7 @@ import axios from 'axios';
 const Signup = () => {
 	const [ email, setEmail ] = useState('');
 	const [ name, setName ] = useState('');
-	const [ school, setSchool ] = useState('');
+	const [ institution, setSchool ] = useState('');
 	const [ category, setCategory ] = useState('');
 	const [ parentEmail, setParentmail ] = useState('');
 	const [ password, setPassword ] = useState('');
