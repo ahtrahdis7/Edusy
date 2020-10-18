@@ -2,6 +2,7 @@
 const express = require('express')
 // Create the express app
 const app = express()
+const cors = require('cors');
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -17,6 +18,14 @@ const AuthRouter = require('./Routes/Auth/AuthRouter');
 const UsersRouter = require('./Routes/Users/UserRouter');
 const FeatureRouter = require('./Routes/Features/FeatureRouter');
 const SubjectRouter = require('./Routes/Subjects/Router');
+
+// CORS 
+app.use(cors());
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // INIT MONGO DB
 const mongodburl = config.MONGODB_URL;
