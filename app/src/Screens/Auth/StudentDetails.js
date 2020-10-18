@@ -21,7 +21,7 @@ class StudentDetails extends React.Component {
 						<form class='login100-form validate-form'>
 							<span class='login100-form-title'>Welcome Student !</span>
 
-							<div class='wrap-input100 validate-input' data-validate='Name is required'>
+							{/* <div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<select
 									class='input100'
 									name='institute_name'
@@ -38,8 +38,8 @@ class StudentDetails extends React.Component {
 								<span class='symbol-input100'>
 									<i class='fa fa-university' aria-hidden='true' />
 								</span>
-							</div>
-							<div class='wrap-input100 validate-input' data-validate='Name is required'>
+							</div> */}
+							{/* <div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<input
 									class='input100'
 									type='text'
@@ -51,7 +51,7 @@ class StudentDetails extends React.Component {
 								<span class='symbol-input100'>
 									<i class='fa fa-user' aria-hidden='true' />
 								</span>
-							</div>
+							</div> */}
 							<div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<input
 									class='input100'

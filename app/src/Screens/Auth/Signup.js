@@ -5,7 +5,7 @@ import axios from 'axios';
 const Signup = () => {
 	const [ email, setEmail ] = useState('');
 	const [ name, setName ] = useState('');
-	const [ school, setSchool ] = useState('');
+	const [ institution, setSchool ] = useState('');
 	const [ category, setCategory ] = useState('');
 	const [ parentEmail, setParentmail ] = useState('');
 	const [ password, setPassword ] = useState('');
@@ -134,7 +134,7 @@ const Signup = () => {
 							</div>
 							<div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<select
-									value={school}
+									value={institution}
 									onChange={(e) => setSchool(e.target.value)}
 									class='input100'
 									name='institute_name'
