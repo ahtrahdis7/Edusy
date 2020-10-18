@@ -21,7 +21,7 @@ class NoticeBoard extends React.Component {
 	render () {
 		const notices = this.state.notice;
 		const shownotice = notices.map((noticedetails) => {
-				console.log(noticedetails);
+				// console.log(noticedetails);
 				if (noticedetails) {
 					return (
 						<div className='alert alert-info alert-with-icon' data-notify='container'>
