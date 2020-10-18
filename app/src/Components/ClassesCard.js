@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
-
 class ClassesCard extends React.Component {
 	constructor (props) {
 		super(props);
@@ -154,9 +153,7 @@ class ClassesCard extends React.Component {
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className='row'>
-										<div className='col-lg-12 ml-auto mr-auto'>
+										<div className='card-body'>
 											<div className='row'>
 												<div className='class-card col-md-4 btn mr-auto ml-auto'>
 													<img
@@ -202,8 +199,8 @@ class ClassesCard extends React.Component {
 						</div>
 					</div>
 				</div>
-			</div>
-			</div>
+				</div>
+				</div>
 			</div>
 		);
 	}
