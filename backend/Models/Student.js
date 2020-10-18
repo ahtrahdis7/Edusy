@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Score = mongoose.Schema({
     subject: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Subjects',
+        ref: 'Subject',
     },
     marks: {
         type: Number,
@@ -37,4 +37,4 @@ const Student = mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('student', Student);
+module.exports = mongoose.model('Student', Student);

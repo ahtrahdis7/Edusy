@@ -8,13 +8,19 @@ const Student = require('../../Models/Student')
 const get = (req, res, next) => {
     Parent.find({user: req.user._id})
     .populate('user')
-    .populate('student')
-    .populate('student.score.subject')
-    .then((doc)=> {
-        if(doc){
-            res.statusCode = 200;
-            res.json({
-                data: doc
+    .populate('Student.score.subject')
+    .then((parent)=> {
+        if(parent[0]){
+            console.log(parent[0])
+            Student.findById(parent[0].student[0])
+            .populate('user')
+            .populate('score.subject')
+            .then((student) => {
+                res.statusCode = 200;
+                res.json({
+                    parent: parent,
+                    student: student,
+                })
             })
         }
     })

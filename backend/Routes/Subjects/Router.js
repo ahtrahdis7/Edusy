@@ -13,6 +13,7 @@ SubjectRouter.route('/')
 .put(authenticate.verifyUser,subjects.put)
 .delete(authenticate.verifyUser,subjects.delete)
 
+// to be added
 // SubjectRouter.route('/:subjectId')
 // .get(teachers.get)
 // .post(authenticate.verifyUser,teachers.post)

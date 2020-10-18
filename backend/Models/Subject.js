@@ -45,4 +45,4 @@ const Subject = mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('subject', Subject);
+module.exports = mongoose.model('Subject', Subject);

@@ -11,10 +11,10 @@ const Parent = mongoose.Schema({
     },
     student: {
         type: [mongoose.Schema.Types.ObjectId],
-        ref: 'student',
+        ref: 'Student',
     }
     
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('parent', Parent);
+module.exports = mongoose.model('Parent', Parent);

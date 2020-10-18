@@ -43,6 +43,7 @@ const post = (req, res, next) => {
                 });
             }
         } else {
+            req.body.isEmailVerified = true;
             User.register(new User(req.body), req.body.password, (err, user) => {
                 if(err){
                     res.statusCode = 500;
@@ -50,7 +51,6 @@ const post = (req, res, next) => {
                     res.json({err: err});
                 } else {
                     user.save((err, user) => {
-                        const studentId = user._id;
                         if(err){
                             res.statusCode = 500;
                             res.setHeader('Content-Type', 'application/json');
@@ -78,23 +78,28 @@ const post = (req, res, next) => {
 
                             if(req.body.isStudent){
                                 req.body.roll_no = shortid.generate();
+                                req.body.user = user._id
                                 Student.create(req.body)
-                                const parent = {
-                                    email: req.body.parentEmail,
-                                    pass : generator.generate({length: 8, uppercase: false, numbers: true}),
-                                    isParent: true,
-                                }
-                                User.register(new User(parent), parent.pass, (err, user) => {
-                                    console.log("Parent User Account created")
-
-                                    Mail.sendPassword(parent);
-                                    Parent.create({
-                                        email: parent.email,
-                                        user: user._id,
-                                        student: studentId
+                                .then((doc) => {
+                                    const parent = {
+                                        email: req.body.parentEmail,
+                                        pass : generator.generate({length: 8, uppercase: false, numbers: true}),
+                                        isParent: true,
+                                        isEmailVerified : true,
+                                    }
+                                    User.register(new User(parent), parent.pass, (err, user) => {
+                                        console.log("Parent User Account created")
+    
+                                        Mail.sendPassword(parent);
+                                        Parent.create({
+                                            email: parent.email,
+                                            user: user._id,
+                                            student: doc._id,
+                                        });
+                                        console.log("Parent Account created")
                                     });
-                                    console.log("Parent Account created")
-                                });
+                                })
+                                
                             } else {
                                 Teacher.create({user: user._id});
                                 console.log("Teacher Account Created")

@@ -10,7 +10,7 @@ const students = require('./Students')
 const UserRouter = express.Router();
 
 UserRouter.route('/parents')
-.get(parents.get)
+.get(authenticate.verifyUser,parents.get)
 .post(authenticate.verifyUser,parents.post)
 .put(authenticate.verifyUser,parents.put)
 .delete(authenticate.verifyUser,parents.delete)
