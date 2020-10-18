@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from '../../Components/Sidebar';
 
+
 class StudentProfile extends React.Component {
 	constructor (props) {
 		super(props);
@@ -71,7 +72,7 @@ class StudentProfile extends React.Component {
 													<label>Company (disabled)</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														disabled=''
 														placeholder='Company'
 														value='Creative Code Inc.'
@@ -83,7 +84,7 @@ class StudentProfile extends React.Component {
 													<label>Username</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Username'
 														value='michael23'
 													/>
@@ -94,7 +95,7 @@ class StudentProfile extends React.Component {
 													<label for='exampleInputEmail1'>Email address</label>
 													<input
 														type='email'
-														className='form-control'
+														className='form-control-c'
 														placeholder='mike@email.com'
 													/>
 												</div>
@@ -106,7 +107,7 @@ class StudentProfile extends React.Component {
 													<label>First Name</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Company'
 														value='Mike'
 													/>
@@ -117,7 +118,7 @@ class StudentProfile extends React.Component {
 													<label>Last Name</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Last Name'
 														value='Andrew'
 													/>
@@ -130,7 +131,7 @@ class StudentProfile extends React.Component {
 													<label>Address</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Home Address'
 														value='Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09'
 													/>
@@ -143,7 +144,7 @@ class StudentProfile extends React.Component {
 													<label>City</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='City'
 														value='Mike'
 													/>
@@ -154,7 +155,7 @@ class StudentProfile extends React.Component {
 													<label>Country</label>
 													<input
 														type='text'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Country'
 														value='Andrew'
 													/>
@@ -165,7 +166,7 @@ class StudentProfile extends React.Component {
 													<label>Postal Code</label>
 													<input
 														type='number'
-														className='form-control'
+														className='form-control-c'
 														placeholder='ZIP Code'
 													/>
 												</div>
@@ -178,12 +179,11 @@ class StudentProfile extends React.Component {
 													<textarea
 														rows='4'
 														cols='80'
-														className='form-control'
+														className='form-control-c'
 														placeholder='Here can be your description'
 														value='Mike'
 													>
-														Lamborghini Mercy, Your chick she so thirsty, I'm in that two
-														seat Lambo.
+														I am a student of Class 9
 													</textarea>
 												</div>
 											</div>
@@ -191,7 +191,7 @@ class StudentProfile extends React.Component {
 									</form>
 								</div>
 								<div className='card-footer'>
-									<button type='submit' className='btn btn-fill btn-primary'>
+									<button type='submit' className='btn btn-fill btn-primary-h'>
 										Save
 									</button>
 								</div>
@@ -207,16 +207,14 @@ class StudentProfile extends React.Component {
 											<div className='block block-three' />
 											<div className='block block-four' />
 											<a href='javascript:void(0)'>
-												<img className='avatar' src='../assets/img/emilyz.jpg' alt='...' />
-												<h5 className='title'>Mike Andrew</h5>
+												<img className='avatar' src='../images/emilyz.jpg' alt='...' />
+												<h5 className='title'>Swati Mallick</h5>
 											</a>
 											<p className='description'>Ceo/Co-Founder</p>
 										</div>
 									</p>
 									<div className='card-description'>
-										Do not be scared of the truth because we need to restart the human foundation in
-										truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but
-										the back is...
+										Do not be scared of the truth because we need it.
 									</div>
 								</div>
 								<div className='card-footer'>
@@ -225,16 +223,16 @@ class StudentProfile extends React.Component {
 											href='javascript:void(0)'
 											className='btn btn-icon btn-round btn-facebook'
 										>
-											<i className='fab fa-facebook' />
+											<i className='fa fa-facebook' />
 										</button>
 										<button
 											href='javascript:void(0)'
 											className='btn btn-icon btn-round btn-twitter'
 										>
-											<i className='fab fa-twitter' />
+											<i className='fa fa-twitter' />
 										</button>
 										<button href='javascript:void(0)' className='btn btn-icon btn-round btn-google'>
-											<i className='fab fa-google-plus' />
+											<i className='fa fa-google-plus' />
 										</button>
 									</div>
 								</div>
