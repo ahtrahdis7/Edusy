@@ -1,16 +1,39 @@
 import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 const Signup = () => {
 	const [ email, setEmail ] = useState('');
 	const [ name, setName ] = useState('');
-	const [ institution, setSchool ] = useState('');
+	const [ school, setSchool ] = useState('');
 	const [ category, setCategory ] = useState('');
 	const [ parentEmail, setParentmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 	const [ confirmPassword, setConfirmPassword ] = useState('');
 	const [ signupSuccess, setSignupsucess ] = useState(false);
 
+	const handlesubmit = (e) => {
+		e.preventDefault();
+		if (password === confirmPassword) {
+			axios
+				.post(process.env.REACT_APP_BASEURL + '/auth/signin', {
+					email: email.toLowerCase(),
+					password: password,
+					name: name,
+					password: password
+				})
+				.then(
+					(response) => {
+						if (response.data.success === true) {
+							setSignupsucess(true);
+						}
+					},
+					(error) => {
+						console.log(error);
+					}
+				);
+		}
+	};
 	if (signupSuccess) {
 		return <Redirect to='/dashboard' />;
 	} else {
@@ -22,7 +45,7 @@ const Signup = () => {
 							<img src='images/img-01.png' alt='IMG' />
 						</div>
 
-						<form className='login100-form validate-form' action='inter.html'>
+						<form className='login100-form validate-form' onSubmit={handlesubmit}>
 							<span className='login100-form-title' style={{ fontWeight: 'bolder', fontSize: '40px' }}>
 								Register Here!
 							</span>
@@ -30,7 +53,7 @@ const Signup = () => {
 								<input
 									className='input100'
 									type='text'
-									name='email'
+									name='name'
 									placeholder='Enter Name'
 									required='required'
 									value={name}
@@ -134,7 +157,7 @@ const Signup = () => {
 								data-validate='Valid email is required: ex@abc.xyz'
 							>
 								<input
-									value={parenEmail}
+									value={parentEmail}
 									onChange={(e) => setParentmail(e.target.value)}
 									className='input100'
 									type='text'
