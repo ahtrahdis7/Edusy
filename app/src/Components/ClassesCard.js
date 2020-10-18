@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
-
 class ClassesCard extends React.Component {
 	constructor (props) {
 		super(props);
@@ -102,97 +101,109 @@ class ClassesCard extends React.Component {
 						</div>
 					</div>
 					{/* <!-- End Navbar --> */}
-			<div className='content'>
-				<div className='row'>
-					<div className='col-md-12'>
-						<div className='card'>
-							<div className='card-header'>
-								<div className='row'>
-									<div className='col-sm-6 text-left'>
-										<h2 className='card-title'>Classes</h2>
-									</div>
-								</div>
-								<div className='card-body'>
-									<div className='row'>
-										<div className='col-lg-12 ml-auto mr-auto'>
-											<div className='row'>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block'>
-													<div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
-													</div>
-													</button>
-												</div>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
-													</div>
-													</button>
-												</div>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
-													</div></button>
-												</div>
+					<div className='content'>
+						<div className='row'>
+							<div className='col-md-12'>
+								<div className='card'>
+									<div className='card-header'>
+										<div className='row'>
+											<div className='col-sm-6 text-left'>
+												<h2 className='card-title'>Classes</h2>
 											</div>
 										</div>
-									</div>
-									<div className='row'>
-										<div className='col-lg-12 ml-auto mr-auto'>
+										<div className='card-body'>
 											<div className='row'>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+												<div className='col-lg-12 ml-auto mr-auto'>
+													<div className='row'>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<Link to='/subject' className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bolder' }}>Biology</p>
+																	<p style={{ fontWeight: 'bolder' }}>Class 9</p>
+																</div>
+															</Link>
+														</div>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<button className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bolder' }}>Biology</p>
+																	<p style={{ fontWeight: 'bolder' }}>Class 9</p>
+																</div>
+															</button>
+														</div>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<button className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bolder' }}>Biology</p>
+																	<p style={{ fontWeight: 'bolder' }}>Class 9</p>
+																</div>
+															</button>
+														</div>
 													</div>
-													</button>
 												</div>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block' ><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+											</div>
+											<div className='row'>
+												<div className='col-lg-12 ml-auto mr-auto'>
+													<div className='row'>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<button className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bolder' }}>Biology</p>
+																	<p style={{ fontWeight: 'bolder' }}>Class 9</p>
+																</div>
+															</button>
+														</div>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<button className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bolder' }}>Biology</p>
+																	<p style={{ fontWeight: 'bolder' }}>Class 9</p>
+																</div>
+															</button>
+														</div>
+														<div className='class-card col-md-4 btn mr-auto ml-auto'>
+															<img
+																className='avatar'
+																src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
+																alt='...'
+															/>
+															<button className='btn btn-primary btn-block'>
+																<div>
+																	<p style={{ fontWeight: 'bold', fontSize: '18px' }}>
+																		Biology
+																	</p>
+																	<p style={{ fontWeight: 'bold', fontSize: '18px' }}>
+																		Class 9
+																	</p>
+																</div>
+															</button>
+														</div>
 													</div>
-													</button>
-												</div>
-												<div className='class-card col-md-4 btn mr-auto ml-auto'>
-													<img
-														className='avatar'
-														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
-														alt='...'
-													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bold", fontSize:"18px"}}>Biology</p>
-													<p style= {{fontWeight:"bold", fontSize:"18px"}}>Class 9</p>
-													</div>
-													</button>
 												</div>
 											</div>
 										</div>
@@ -202,8 +213,6 @@ class ClassesCard extends React.Component {
 						</div>
 					</div>
 				</div>
-			</div>
-			</div>
 			</div>
 		);
 	}

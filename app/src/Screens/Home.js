@@ -19,10 +19,8 @@ class Home extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<Slider />
 				<TakeCourse />
 				<OurFeature />
-				<ParentSay />
 				<Achievements />
 				<Footer />
 			</div>
