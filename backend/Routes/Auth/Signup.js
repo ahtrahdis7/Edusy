@@ -81,7 +81,8 @@ const post = (req, res, next) => {
                                 Student.create(req.body)
                                 const parent = {
                                     email: req.body.parentEmail,
-                                    pass : generator.generate({length: 8, uppercase: false})
+                                    pass : generator.generate({length: 8, uppercase: false, numbers: true}),
+                                    isParent: true,
                                 }
                                 User.register(new User(parent), parent.pass, (err, user) => {
                                     console.log("Parent User Account created")

@@ -9,7 +9,7 @@ const SubjectRouter = express.Router();
 
 SubjectRouter.route('/')
 .get(subjects.get)
-.post(authenticate.verifyUser,subjects.post)
+.post(authenticate.verifyUser,authenticate.verifyTeacher ,subjects.post)
 .put(authenticate.verifyUser,subjects.put)
 .delete(authenticate.verifyUser,subjects.delete)
 
