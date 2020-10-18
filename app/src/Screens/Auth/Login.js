@@ -29,7 +29,7 @@ const Login = () => {
 			);
 	};
 	if (loginsuccess) {
-		return <Redirect to='/dashboard' />;
+		return <Redirect to='/classes' />;
 	} else {
 		return (
 			<div className='limiter'>

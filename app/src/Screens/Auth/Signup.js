@@ -16,11 +16,13 @@ const Signup = () => {
 		e.preventDefault();
 		if (password === confirmPassword) {
 			axios
-				.post(process.env.REACT_APP_BASEURL + '/auth/signin', {
+				.post(process.env.REACT_APP_BASEURL + '/auth/signup', {
 					email: email.toLowerCase(),
 					password: password,
 					name: name,
-					password: password
+					category: category,
+					parentEmail: parentEmail,
+					institution: institution
 				})
 				.then(
 					(response) => {
@@ -35,7 +37,7 @@ const Signup = () => {
 		}
 	};
 	if (signupSuccess) {
-		return <Redirect to='/dashboard' />;
+		return <Redirect to='/login' />;
 	} else {
 		return (
 			<div className='limiter'>
@@ -171,9 +173,7 @@ const Signup = () => {
 							</div>
 
 							<div className='container-login100-form-btn'>
-								<Link to='registerstudent'>
-									<button className='login100-form-btn'>Register</button>
-								</Link>
+								<button className='login100-form-btn'>Register</button>
 							</div>
 
 							<div className='text-center p-t-50'>

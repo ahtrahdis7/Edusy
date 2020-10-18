@@ -7,16 +7,36 @@ class DiscussionRoom extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-
+            discussion: []
         }
     }
 
     componentDidMount(){
-
+        fetch('http://localhost:5000/feature/discussion')
+        .then((response) => response.json())
+        .then((data) => {
+            this.setState({ discussion: data.discussions })
+        });
     }
 
     render(){
-
+        console.log(this.state)
+        const discussion = this.state.discussion.map((threads) => {
+            if(threads){
+                return (
+                    <div class="row">
+                        <p>_</p>
+                        <div class="col-md-12 mr-auto ml-auto">
+                            <div class="form-group " >
+                                <h4>{threads.thread}</h4>
+                            </div>
+                        </div>
+                    </div>
+                );
+            } else {
+                return <div></div>;
+            }
+        });
         return(
             <div className="wrapper">
                 <Sidebar />
@@ -86,58 +106,7 @@ class DiscussionRoom extends React.Component {
                         </div>
                         <div class="card-body">
                             <form>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="photo-discuss">
-                                    <img src="../images/anime3.png" alt="Profile Photo" />
-                                    </div>
-                                    <label>ASTHA_P</label>
-                                    <p class="form-control-c">I think sun rises in the east is a fact.</p>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="photo-discuss">
-                                    <img src="../images/anime3.png" alt="Profile Photo" />
-                                    </div>
-                                    <label>SHAHEER_19</label>
-                                    <p class="form-control-c">Okay yeah I agree with this point</p>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="photo-discuss">
-                                    <img src="../images/anime3.png" alt="Profile Photo" />
-                                    </div>
-                                    <label>ASTHA_P</label>
-                                    <p class="form-control-c">Can someone tell me the syllabus for tomorrow quiz?</p>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="photo-discuss">
-                                    <img src="../images/anime3.png" alt="Profile Photo" />
-                                    </div>
-                                    <label>ASTHA_P</label>
-                                    <p class="form-control-c"> Yeah! Its upto Endocrine System.</p>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mr-auto ml-auto">
-                                <div class="form-group " >
-                                    <label>Post Doubt Here!</label>
-                                    <textarea rows="4" cols="80" class="form-control-c" placeholder="Here can be your description" value="Mike">What is the value of PI?</textarea>
-                                </div>
-                                </div>
-                            </div>
+                            {discussion}
                             </form>
                         </div>
                         <div class="card-footer mr-auto ml-auto">
