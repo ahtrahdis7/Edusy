@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const Login = () => {
 	const [ email, setEmail ] = React.useState('');
@@ -9,24 +10,26 @@ const Login = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		alert('s');
 		axios
-			.post('http://localhost:6000/auth/login', {
+			.post(process.env.REACT_APP_BASEURL + '/auth/login', {
 				email: email.toLowerCase(),
 				password: password
 			})
 			.then(
 				(response) => {
-					console.log(response);
-					setLoginsuccess(true);
+					if (response.data.success) {
+						Cookies.set('session-id', response.data['token']);
+						setLoginsuccess(true);
+					}
 				},
 				(error) => {
 					alert('something went wrong');
+					console.log(error);
 				}
 			);
 	};
 	if (loginsuccess) {
-		return <Redirect to='/' />;
+		return <Redirect to='/dashboard' />;
 	} else {
 		return (
 			<div className='limiter'>
