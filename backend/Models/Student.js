@@ -24,10 +24,6 @@ const Student = mongoose.Schema({
         type: String,
         required: false
     },
-    mentor: {
-        type: String,
-        required: false
-    },
     class:{
         type: String,
         required: false

@@ -1,10 +1,15 @@
 
 const passport = require('passport');
-const gen_pass = require('generate-password');
+const generator = require('generate-password');
+const shortid = require('shortid');
 
 const authenticate = require('../../authenticate');
 const User = require('../../Models/User')
 const Otp = require('../../Models/Otp')
+const Student = require('../../Models/Student')
+const Parent = require('../../Models/Parent')
+const Teacher = require('../../Models/Teacher')
+
 const Mail = require('../../Utils/Mail');
 
 const get = (req, res, next) => {
@@ -45,6 +50,7 @@ const post = (req, res, next) => {
                     res.json({err: err});
                 } else {
                     user.save((err, user) => {
+                        const studentId = user._id;
                         if(err){
                             res.statusCode = 500;
                             res.setHeader('Content-Type', 'application/json');
@@ -54,6 +60,8 @@ const post = (req, res, next) => {
                             passport.authenticate('local')(req,res, () => {
                                 res.statusCode = 200;
                                 res.setHeader('Content-Type', 'application/json');
+                                user.hash = "";
+                                user.salt = "";
                                 res.json({
                                     success: true, 
                                     status: 'Registration Successful',
@@ -67,6 +75,29 @@ const post = (req, res, next) => {
                             }).then((doc) => {
                                 Mail.SendOtp(doc.email, doc.otp);
                             });
+
+                            if(req.body.isStudent){
+                                req.body.roll_no = shortid.generate();
+                                Student.create(req.body)
+                                const parent = {
+                                    email: req.body.parentEmail,
+                                    pass : generator.generate({length: 8, uppercase: false})
+                                }
+                                User.register(new User(parent), parent.pass, (err, user) => {
+                                    console.log("Parent User Account created")
+
+                                    Mail.sendPassword(parent);
+                                    Parent.create({
+                                        email: parent.email,
+                                        user: user._id,
+                                        student: studentId
+                                    });
+                                    console.log("Parent Account created")
+                                });
+                            } else {
+                                Teacher.create({user: user._id});
+                                console.log("Teacher Account Created")
+                            }
                             //  if student
                                 // CREATE STUDENTS ACCOUNT HERE
                                 // CREATE PARENTS ACCOUNT RIGHT HERE

@@ -47,3 +47,13 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
     }));
 
 exports.verifyUser = passport.authenticate('jwt', {session: false});
+
+exports.verifyParent = (req, res, next) => {
+    if(req.user.isParent == true){
+        return true;
+    } else {
+        return
+    }
+}
+
+exports.verifyTeacher = passport.authenticate('jwt', {session: false});
