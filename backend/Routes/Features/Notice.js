@@ -5,6 +5,7 @@ const NoticeBoard = require('../../Models/NoticeBoard')
 const Mail = require('../../Utils/Mail')
 
 const get = (req, res, next) => {
+    console.log("Get Notice")
     NoticeBoard.find({})
     .then((docs) => {
         res.statusCode = 200;

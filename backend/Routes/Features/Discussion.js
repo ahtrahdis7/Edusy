@@ -5,6 +5,8 @@ const DiscussionRoom = require('../../Models/DiscussionRoom')
 const Mail = require('../../Utils/Mail')
 
 const get = (req, res, next) => {
+    console.log("Get Disscussion")
+
     DiscussionRoom.find({})
     .then((docs) => {
         res.statusCode = 200;
