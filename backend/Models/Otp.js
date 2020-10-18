@@ -14,4 +14,4 @@ const User = mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('Otp', User);
+module.exports = mongoose.model('otp', User);

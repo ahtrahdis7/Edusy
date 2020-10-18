@@ -24,10 +24,6 @@ const Student = mongoose.Schema({
         type: String,
         required: false
     },
-    mentor: {
-        type: String,
-        required: false
-    },
     class:{
         type: String,
         required: false
@@ -41,4 +37,4 @@ const Student = mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('Student', Student);
+module.exports = mongoose.model('student', Student);
