@@ -111,7 +111,7 @@ const Signup = () => {
 							</div>
 							<div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<select
-									value={school}
+									value={institution}
 									onChange={(e) => setSchool(e.target.value)}
 									class='input100'
 									name='institute_name'
@@ -134,7 +134,7 @@ const Signup = () => {
 								data-validate='Valid email is required: ex@abc.xyz'
 							>
 								<input
-									value={parenEmail}
+									value={parentEmail}
 									onChange={(e) => setParentmail(e.target.value)}
 									className='input100'
 									type='text'
