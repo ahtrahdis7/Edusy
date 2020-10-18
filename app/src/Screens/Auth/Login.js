@@ -1,30 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
-class Login extends React.Component {
-	constructor (props) {
-		super(props);
-		this.state = {
-			email: '',
-			password: ''
-		};
-		this.handleChange = this.handleChange.bind(this);
-		this.handlepassword = this.handlepassword.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-	handleChange (event) {
-		this.setState({ email: event.target.value });
-	}
-	handlepassword (event) {
-		this.setState({ password: event.target.value });
-	}
-	handleSubmit (event) {
+const Login = () => {
+	const [ email, setEmail ] = React.useState('');
+	const [ loginsuccess, setLoginsuccess ] = React.useState(false);
+	const [ password, setPassword ] = React.useState('');
+
+	const handleSubmit = (event) => {
 		event.preventDefault();
-		alert('login success');
-	}
-	componentDidMount () {}
-
-	render () {
+		alert('s');
+		axios
+			.post('http://localhost:6000/auth/login', {
+				email: email.toLowerCase(),
+				password: password
+			})
+			.then(
+				(response) => {
+					console.log(response);
+					setLoginsuccess(true);
+				},
+				(error) => {
+					alert('something went wrong');
+				}
+			);
+	};
+	if (loginsuccess) {
+		return <Redirect to='/' />;
+	} else {
 		return (
 			<div className='limiter'>
 				<div className='container-login100'>
@@ -33,7 +36,7 @@ class Login extends React.Component {
 							<img src='images/img-01.png' alt='IMG' />
 						</div>
 
-						<form className='login100-form validate-form' onSubmit={this.handleSubmit}>
+						<form className='login100-form validate-form' onSubmit={handleSubmit}>
 							<span className='login100-form-title'>Login Here!</span>
 
 							<div
@@ -45,8 +48,8 @@ class Login extends React.Component {
 									type='text'
 									name='email'
 									placeholder='Email'
-									value={this.state.email}
-									onChange={this.handleChange}
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
@@ -57,8 +60,8 @@ class Login extends React.Component {
 							<div
 								className='wrap-input100 validate-input'
 								data-validate='Password is required'
-								value={this.state.email}
-								onChange={this.handlepassword}
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
 							>
 								<input className='input100' type='password' name='pass' placeholder='Password' />
 								<span className='focus-input100' />
@@ -88,6 +91,6 @@ class Login extends React.Component {
 			</div>
 		);
 	}
-}
+};
 
 export default Login;
