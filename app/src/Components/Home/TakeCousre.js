@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TakeCourse = () => {
 	return (
 		<section
 			className='ftco-intro'
-			style={{ backgroundImage: 'url(images/bg_3.jpg)' }}
+			style={{ backgroundImage: 'url(images/bg_10.jpg)' }}
 			data-stellar-background-ratio='0.5'
 		>
 			<div className='overlay' />
@@ -12,15 +13,13 @@ const TakeCourse = () => {
 				<div className='row'>
 					<div className='col-md-9 m-t-120'>
 						<h2>Teaching Your Child Some Good Manners</h2>
-						<p className='mb-0'>
-							
-						</p>
+						<p className='mb-0' />
 					</div>
 					<div className='col-md-3 d-flex align-items-center m-t-120'>
 						<p className='mb-0'>
-							<a href='#' className='btn btn-secondary px-4 py-3'>
-								
-							</a>
+							<Link to='signup' className='btn btn-secondary px-4 py-3'>
+								Take a Course
+							</Link>
 						</p>
 					</div>
 				</div>
