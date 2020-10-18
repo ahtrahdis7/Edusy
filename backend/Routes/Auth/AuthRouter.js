@@ -38,10 +38,9 @@ AuthRouter.route('/verifyotp')
 
 AuthRouter.route('/reset')
 .get(reset.get)
-.post(reset.post)
+.post(authenticate.verifyUser, reset.post)
 .put(reset.put)
 .delete(reset.delete)
-
 
 AuthRouter.route('/google_auth')
 .get(google_auth.get)
