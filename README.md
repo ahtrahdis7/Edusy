@@ -30,5 +30,5 @@ MONGODB_URL=mongodb+srv://hackerearth:qsCcCwckT0OIrzws@cluster0.eyosf.mongodb.ne
 PORT=5000
 MAIL_ID=xxxxxxxx@gmail.com
 MAIL_PASS=xxxxxxxxxxxx
-JWT_SIGNIN_KEY=get_the_fuck_outta_here_u_bitches
+JWT_SIGNIN_KEY=qwertyuioplkjhgfdsazxcvbnm
 </pre>
