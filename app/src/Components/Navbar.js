@@ -13,8 +13,8 @@ class Home extends React.Component {
 		return (
 			<nav className='navbar navbar-fixed navbar-expand-lg'>
 				<div className='container d-flex align-items-center'>
-					<Link className='nav-item' to='/'>
-						Appname
+					<Link className='nav-item' to='/' style={{ color: 'White', fontSize: '1.5em' }}>
+						Edusy
 					</Link>
 					<button
 						className='navbar-toggler'
