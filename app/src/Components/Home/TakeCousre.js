@@ -10,7 +10,7 @@ const TakeCourse = () => {
 			<div className='overlay' />
 			<div className='container'>
 				<div className='row'>
-					<div className='col-md-9'>
+					<div className='col-md-9 m-t-120'>
 						<h2>Teaching Your Child Some Good Manners</h2>
 						<p className='mb-0'>
 							A small river named Duden flows by their place and supplies it with the necessary
@@ -18,7 +18,7 @@ const TakeCourse = () => {
 							mouth.
 						</p>
 					</div>
-					<div className='col-md-3 d-flex align-items-center'>
+					<div className='col-md-3 d-flex align-items-center m-t-120'>
 						<p className='mb-0'>
 							<a href='#' className='btn btn-secondary px-4 py-3'>
 								Take a Course

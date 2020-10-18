@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
-
 class ClassesCard extends React.Component {
 	constructor (props) {
 		super(props);
@@ -50,7 +49,7 @@ class ClassesCard extends React.Component {
 											<div className='photo'>
 												<img src='../images/anime3.png' alt='Profile Photo' />
 											</div>
-											{/* <b className='caret d-none d-lg-block d-xl-block' /> */}
+											<b className='caret d-none d-lg-block d-xl-block' /> 
 											<p className='d-lg-none'>Log out</p>
 										</a>
 										<ul className='dropdown-menu dropdown-navbar'>
@@ -122,10 +121,10 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block'>
+													<button className='btn btn-primary-h btn-block'>
 													<div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div>
 													</button>
 												</div>
@@ -135,9 +134,9 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+													<button className='btn btn-primary-h btn-block'><div>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div>
 													</button>
 												</div>
@@ -147,16 +146,14 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+													<button className='btn btn-primary-h btn-block'><div>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div></button>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className='row'>
-										<div className='col-lg-12 ml-auto mr-auto'>
+										<div className='card-body'>
 											<div className='row'>
 												<div className='class-card col-md-4 btn mr-auto ml-auto'>
 													<img
@@ -164,9 +161,9 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+													<button className='btn btn-primary-h btn-block'><div>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div>
 													</button>
 												</div>
@@ -176,9 +173,9 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block' ><div>
-													<p style= {{fontWeight:"bolder"}}>Biology</p>
-													<p style= {{fontWeight:"bolder"}}>Class 9</p>
+													<button className='btn btn-primary-h btn-block' ><div>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div>
 													</button>
 												</div>
@@ -188,9 +185,9 @@ class ClassesCard extends React.Component {
 														src='https://res.cloudinary.com/saidatta/image/upload/v1602905348/emilyz_ofd2b6.jpg'
 														alt='...'
 													/>
-													<button className='btn btn-primary btn-block'><div>
-													<p style= {{fontWeight:"bold", fontSize:"18px"}}>Biology</p>
-													<p style= {{fontWeight:"bold", fontSize:"18px"}}>Class 9</p>
+													<button className='btn btn-primary-h btn-block'><div>
+													<p style= {{fontSize:"16px"}}>BIOLOGY</p>
+													<p style= {{fontSize:"16px"}}>Class 9</p>
 													</div>
 													</button>
 												</div>
@@ -202,8 +199,8 @@ class ClassesCard extends React.Component {
 						</div>
 					</div>
 				</div>
-			</div>
-			</div>
+				</div>
+				</div>
 			</div>
 		);
 	}

@@ -11,10 +11,10 @@ class Home extends React.Component {
 
 	render () {
 		return (
-			<nav className='navbar navbar-expand-lg ftco_navbar ftco-navbar-light' id='ftco-navbar'>
+			<nav className='navbar navbar-fixed navbar-expand-lg'>
 				<div className='container d-flex align-items-center'>
-					<Link className='navbar-brand' to='/'>
-						appname
+					<Link className='nav-item' to='/'>
+						Appname
 					</Link>
 					<button
 						className='navbar-toggler'
@@ -32,11 +32,6 @@ class Home extends React.Component {
 							<li className='nav-item active'>
 								<Link to='/' className='nav-link pl-0'>
 									Home
-								</Link>
-							</li>
-							<li className='nav-item'>
-								<Link to='/about' className='nav-link'>
-									About
 								</Link>
 							</li>
 							<li className='nav-item'>

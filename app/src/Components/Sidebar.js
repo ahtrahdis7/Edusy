@@ -6,7 +6,7 @@ const Sidebar = () => {
 		<div className='sidebar'>
 			<div className='sidebar-wrapper'>
 				<ul className='nav'>
-					<li className='active'>
+					<li>
 						<Link to='/dashboard'>
 							<i className='fa fa-pie-chart' />
 							<p>Dashboard</p>
@@ -32,9 +32,7 @@ const Sidebar = () => {
 					</li>
 				</ul>
 			</div>
-			
 		</div>
-		
 	);
 };
 export default Sidebar;
