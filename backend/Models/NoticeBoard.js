@@ -17,4 +17,4 @@ const Notice = mongoose.Schema({
 }, {timestamps: true});
 
 
-module.exports = mongoose.model('Notice', Notice);
+module.exports = mongoose.model('notice', Notice);

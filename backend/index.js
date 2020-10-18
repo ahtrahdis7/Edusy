@@ -14,6 +14,9 @@ const authenticate = require('./authenticate');
 
 // IMPORT ROUTERS
 const AuthRouter = require('./Routes/Auth/AuthRouter');
+const UsersRouter = require('./Routes/Users/UserRouter');
+const FeatureRouter = require('./Routes/Features/FeatureRouter');
+const SubjectRouter = require('./Routes/Subjects/Router');
 
 // INIT MONGO DB
 const mongodburl = config.MONGODB_URL;
@@ -40,6 +43,9 @@ app.use(passport.initialize());
 // Routes and middleware
 
 app.use('/auth', AuthRouter);
+app.use('/user', UsersRouter);
+app.use('/feature', FeatureRouter);
+// app.use('/subject', SubjectRouter);
 // app.use(/* ... */)
 // app.get(/* ... */)
 
