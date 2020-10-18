@@ -5,21 +5,16 @@ const TakeCourse = () => {
 	return (
 		<section
 			className='ftco-intro'
-			style={{ backgroundImage: 'url(images/bg_10.jpg)' }}
+			style={{ backgroundImage: 'url(images/hello.jpg)' }}
 			data-stellar-background-ratio='0.5'
 		>
 			<div className='overlay' />
 			<div className='container'>
 				<div className='row'>
 					<div className='col-md-9 m-t-120'>
-						<h2>Teaching Your Child Some Good Manners</h2>
-						<p className='mb-0' />
-					</div>
-					<div className='col-md-3 d-flex align-items-center m-t-120'>
+						<h2>EDUCATION MADE EASIER!</h2>
 						<p className='mb-0'>
-							<Link to='signup' className='btn btn-secondary px-4 py-3'>
-								Take a Course
-							</Link>
+						We have been able to work closely to create an online school management system that is perfect for us, that meets all of our needs and has so much potential to get better and better as we grow and change in the coming years.
 						</p>
 					</div>
 				</div>
