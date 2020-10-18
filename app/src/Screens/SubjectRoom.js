@@ -1,5 +1,9 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import '../Screens/css/assets/css/black-dashboard.css';
+import '../Screens/css/assets/css/black-dashboard.min.css';
+import '../Screens/css/assets/css/nucleo-icons.css';
+import '../Screens/css/assets/demo/demo.css';
 
 class SubjectRoom extends React.Component {
 	constructor (props) {
@@ -25,7 +29,7 @@ class SubjectRoom extends React.Component {
 									</button>
 								</div>
 								<a className='navbar-brand' href='javascript:void(0)'>
-									classNamees
+									CLASS
 								</a>
 							</div>
 							<button
@@ -90,16 +94,16 @@ class SubjectRoom extends React.Component {
 							<div className='col-md-6'>
 								<h2>Biology</h2>
 								<h3>
-									className 9<br />Bharati Mishra
+									Class 9<br />Bharati Mishra
 								</h3>
 							</div>
 							<div className='col-md-6'>
 								<div className='float-right'>
-									<button type='button' class='btn btn-primary'>
+									<button type='button' class='btn btn-primary-h'>
 										Assignments
 									</button>
 									<br />
-									<button type='button' class='btn btn-primary'>
+									<button type='button' class='btn btn-primary-h'>
 										Performance
 									</button>
 								</div>
