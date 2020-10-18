@@ -68,12 +68,10 @@ const post = (req, res, next) => {
                                 Mail.SendOtp(doc.email, doc.otp);
                             });
                             //  if student
-                            // CREATE STUDENTS ACCOUNT HERE
-
-                            // CREATE PARENTS ACCOUNT RIGHT HERE
+                                // CREATE STUDENTS ACCOUNT HERE
+                                // CREATE PARENTS ACCOUNT RIGHT HERE
                             // else 
-                            // CREATE TEACHERS ACCOUNT RIGHT HERE
-
+                                // CREATE TEACHERS ACCOUNT RIGHT HERE
                         }
                     });
                 }
