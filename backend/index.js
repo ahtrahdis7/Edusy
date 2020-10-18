@@ -54,7 +54,7 @@ app.use(passport.initialize());
 app.use('/auth', AuthRouter);
 app.use('/user', UsersRouter);
 app.use('/feature', FeatureRouter);
-// app.use('/subject', SubjectRouter);
+app.use('/subject', SubjectRouter);
 // app.use(/* ... */)
 // app.get(/* ... */)
 

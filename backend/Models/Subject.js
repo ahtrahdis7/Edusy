@@ -24,9 +24,9 @@ const Stats = mongoose.Schema({
 })
 
 const Subject = mongoose.Schema({
-    teacher: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+    name:{
+        type: String,
+        required: false
     },
     code: {
         type: String,

@@ -9,7 +9,7 @@ const get = (req, res, next) => {
     .then((docs) => {
         res.statusCode = 200;
         res.json({
-            discussions: docs
+            notice: docs
         })
     })
 }
@@ -20,7 +20,7 @@ const post = (req, res, next) => {
     .then((doc) => {
         res.statusCode = 200;
         res.json({
-            thread: doc
+            notice: doc
         });
     })
 }
