@@ -4,9 +4,9 @@ import { Link, Redirect } from 'react-router-dom';
 const Signup = () => {
 	const [ email, setEmail ] = useState('');
 	const [ name, setName ] = useState('');
-	const [ school, setSchool ] = useState('');
+	const [ institution, setSchool ] = useState('');
 	const [ category, setCategory ] = useState('');
-	const [ parent_email, setParentmail ] = useState('');
+	const [ parentEmail, setParentmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 	const [ confirmPassword, setConfirmPassword ] = useState('');
 	const [ signupSuccess, setSignupsucess ] = useState(false);
@@ -134,7 +134,7 @@ const Signup = () => {
 								data-validate='Valid email is required: ex@abc.xyz'
 							>
 								<input
-									value={parent_email}
+									value={parenEmail}
 									onChange={(e) => setParentmail(e.target.value)}
 									className='input100'
 									type='text'

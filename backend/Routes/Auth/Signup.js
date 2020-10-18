@@ -76,7 +76,7 @@ const post = (req, res, next) => {
                                 Mail.SendOtp(doc.email, doc.otp);
                             });
 
-                            if(req.body.isStudent){
+                            if(req.body.category === 'Student'){
                                 req.body.roll_no = shortid.generate();
                                 req.body.user = user._id
                                 Student.create(req.body)
