@@ -7,9 +7,9 @@ const Sidebar = () => {
 			<div className='sidebar-wrapper'>
 				<ul className='nav'>
 					<li>
-						<Link to='/dashboard'>
+						<Link to='/classes'>
 							<i className='fa fa-pie-chart' />
-							<p>Dashboard</p>
+							<p>Classes</p>
 						</Link>
 					</li>
 					<li>
@@ -19,9 +19,9 @@ const Sidebar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link to='/classes'>
+						<Link to='/dashboard'>
 							<i className='fa fa-book' />
-							<p>Classes</p>
+							<p>Statistics</p>
 						</Link>
 					</li>
 					<li>
