@@ -7,9 +7,28 @@ class NoticeBoard extends React.Component {
 		this.state = {};
 	}
 
-	componentDidMount () {}
-
+	componentDidMount () {
+		fetch('http://localhost:5000/feature/notice')
+			.then((response) => response.json())
+			.then((data) => this.setState({ notice: data.notice }));
+	}
 	render () {
+		const notices = this.state.notice;
+		const shownotice = () => {
+			notices.map((noticedetails) => {
+				console.log(noticedetails);
+				if (noticedetails) {
+					return (
+						<div className='alert alert-info alert-with-icon' data-notify='container'>
+							<span data-notify='icon' className='fa fa-bell-o' />
+							<span data-notify='message'>{noticedetails.notice}</span>
+						</div>
+					);
+				} else {
+					return <div />;
+				}
+			});
+		};
 		return (
 			<div className='wrapper'>
 				<Sidebar />
@@ -43,7 +62,6 @@ class NoticeBoard extends React.Component {
 							</button>
 							<div className='collapse navbar-collapse' id='navigation'>
 								<ul className='navbar-nav ml-auto'>
-									
 									<li className='dropdown nav-item'>
 										<a href='#' className='dropdown-toggle nav-link' data-toggle='dropdown'>
 											<div className='photo'>
@@ -108,80 +126,7 @@ class NoticeBoard extends React.Component {
 									<div className='card-header'>
 										<h4 className='card-title'>Notice Board</h4>
 									</div>
-									<div className='card-body'>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-										<div className='alert alert-info alert-with-icon' data-notify='container'>
-											<span data-notify='icon' className='fa fa-bell-o' />
-											<span data-notify='message'>
-												This is a notification with close button and icon.
-											</span>
-										</div>
-									</div>
+									<div className='card-body'>{shownotice}</div>
 								</div>
 							</div>
 						</div>
