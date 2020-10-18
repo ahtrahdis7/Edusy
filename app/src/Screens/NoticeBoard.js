@@ -4,18 +4,23 @@ import Sidebar from '../Components/Sidebar';
 class NoticeBoard extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			notice: []
+		};
 	}
 
 	componentDidMount () {
 		fetch('http://localhost:5000/feature/notice')
 			.then((response) => response.json())
-			.then((data) => this.setState({ notice: data.notice }));
+			// .then((data) => console.log(data))
+			.then((data) => {
+				// console.log(data)
+				this.setState({ notice: data.notice })
+			});
 	}
 	render () {
 		const notices = this.state.notice;
-		const shownotice = () => {
-			notices.map((noticedetails) => {
+		const shownotice = notices.map((noticedetails) => {
 				console.log(noticedetails);
 				if (noticedetails) {
 					return (
@@ -25,10 +30,10 @@ class NoticeBoard extends React.Component {
 						</div>
 					);
 				} else {
-					return <div />;
+					return <div></div>;
 				}
 			});
-		};
+		
 		return (
 			<div className='wrapper'>
 				<Sidebar />
