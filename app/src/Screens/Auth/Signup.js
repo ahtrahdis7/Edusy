@@ -1,15 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
 
-class Signup extends React.Component {
-	constructor (props) {
-		super(props);
-		this.state = {};
-	}
+const Signup = () => {
+	const [ email, setEmail ] = useState('');
+	const [ name, setName ] = useState('');
+	const [ school, setSchool ] = useState('');
+	const [ category, setCategory ] = useState('');
+	const [ parent_email, setParentmail ] = useState('');
+	const [ password, setPassword ] = useState('');
+	const [ confirmPassword, setConfirmPassword ] = useState('');
+	const [ signupSuccess, setSignupsucess ] = useState(false);
 
-	componentDidMount () {}
-
-	render () {
+	if (signupSuccess) {
+		return <Redirect to='/dashboard' />;
+	} else {
 		return (
 			<div className='limiter'>
 				<div className='container-login100'>
@@ -29,6 +33,8 @@ class Signup extends React.Component {
 									name='email'
 									placeholder='Enter Name'
 									required='required'
+									value={name}
+									onChange={(e) => setName(e.target.value)}
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
@@ -46,6 +52,8 @@ class Signup extends React.Component {
 									name='email'
 									placeholder='Email'
 									required='required'
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
@@ -60,6 +68,8 @@ class Signup extends React.Component {
 									name='pass'
 									placeholder='Password'
 									required='required'
+									value={password}
+									onChange={(e) => setPassword(e.target.value)}
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
@@ -73,6 +83,8 @@ class Signup extends React.Component {
 									name='conpass'
 									placeholder='Confirm Password'
 									required='required'
+									value={confirmPassword}
+									onChange={(e) => setConfirmPassword(e.target.value)}
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
@@ -81,6 +93,8 @@ class Signup extends React.Component {
 							</div>
 							<div class='wrap-input100 validate-input' data-validate='Category is required'>
 								<select
+									value={category}
+									onChange={(e) => setCategory(e.target.value)}
 									class='input100'
 									name='institute_name'
 									id='institute_name'
@@ -97,6 +111,8 @@ class Signup extends React.Component {
 							</div>
 							<div class='wrap-input100 validate-input' data-validate='Name is required'>
 								<select
+									value={school}
+									onChange={(e) => setSchool(e.target.value)}
 									class='input100'
 									name='institute_name'
 									id='institute_name'
@@ -118,23 +134,24 @@ class Signup extends React.Component {
 								data-validate='Valid email is required: ex@abc.xyz'
 							>
 								<input
+									value={parent_email}
+									onChange={(e) => setParentmail(e.target.value)}
 									className='input100'
 									type='text'
 									name='email'
-									placeholder='Parent Email (Req if student)'
+									placeholder='Parent Email(Req if student)'
 								/>
 								<span className='focus-input100' />
 								<span className='symbol-input100'>
 									<i className='fa fa-envelope' aria-hidden='true' />
 								</span>
 							</div>
-							
+
 							<div className='container-login100-form-btn'>
 								<Link to='registerstudent'>
 									<button className='login100-form-btn'>Register</button>
 								</Link>
 							</div>
-							
 
 							<div className='text-center p-t-50'>
 								<Link className='txt2' to='/login'>
@@ -148,6 +165,6 @@ class Signup extends React.Component {
 			</div>
 		);
 	}
-}
+};
 
 export default Signup;
