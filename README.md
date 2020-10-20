@@ -1,4 +1,5 @@
-# HackerEarth-Learning-App
+# EDUSY
+## Created during a 72 hrs online Hackathon on HackerEarth ( Hacceleraete 2020 ).
 
 
 ## Texh Stack :
