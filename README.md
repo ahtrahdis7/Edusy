@@ -2,7 +2,7 @@
 ### Created during a 72 hrs online Hackathon on HackerEarth ( Hackccelerate 2020 ).
 
 
-## Texh Stack :
+## Stack :
 
 1. React 
 2. Material UI
